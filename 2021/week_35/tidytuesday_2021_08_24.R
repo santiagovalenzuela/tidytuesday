@@ -48,4 +48,6 @@ lemur_plot <- df %>%
 
 ggsave(filename = "tt_plot_20210824.png",
        plot = lemur_plot,
-       device = "png")
+       device = "png",
+       dpi = 72,
+       width = 896, height= 467, units = "px")
