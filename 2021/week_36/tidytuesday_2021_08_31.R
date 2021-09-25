@@ -4,7 +4,7 @@ library(tidytext)
 library(tidyverse)
 library(showtext)
 
-#font_add_google(name = "Balsamiq Sans", family = "balsamiq")
+font_add_google(name = "Balsamiq Sans", family = "balsamiq")
 showtext_auto()
 
 tuesdata <- tidytuesdayR::tt_load('2021-08-31')
@@ -43,4 +43,6 @@ bird_plot <-b_counts %>%
 
 ggsave(filename = "tt_plot_20210831.png",
        plot = bird_plot,
-       device = "png")
+       device = "png",
+       dpi = 72,
+       width = 1193, height= 414, units = "px")
